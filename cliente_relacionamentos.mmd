@@ -1,0 +1,85 @@
+erDiagram
+    CLIENT {
+        string name
+        string cpf
+        string email
+        date date_of_birth
+        string phone
+        boolean is_politically_exposed
+        text exhibition_description
+        string validation_status
+        string access_status
+        string business_size
+        string gender
+    }
+    ADDRESSES {
+        string cep
+        string address
+        string district
+        string number
+        string complement
+        string address_type
+    }
+    BUSINESS {
+        string fantasy_name
+        string corporate_name
+        string cnpj
+        date constitution_date
+        string type_of_constitution
+        string phone
+        string cell_phone
+        string email
+        string line_of_business
+        string business_time
+        string number_of_expected_jobs
+        string main_cnae
+        decimal last_12_month_billing
+        int number_of_employees
+    }
+    SPOUSE {
+        string name
+        string cpf
+        date date_of_birth
+        string profession
+        decimal net_income
+        string phone
+        string email
+        string document_type
+        string registration_number
+        string issuing_body
+        date date_of_issue
+    }
+    BANKACCOUNT {
+        string bank_name
+        string account_type
+        string agency
+        string account_number
+    }
+    PERSONALINFO {
+        string father
+        string mother
+        int number_of_dependents
+        string nationality
+        string birthplace
+        string birthstate
+        string level_of_education
+        string civil_status
+        string marriage_regime
+        string profession
+        string complementary_phone
+        string social_network
+        string document_type
+        string registration_number
+        string issuing_body
+        date date_of_issue
+        decimal net_income
+        decimal other_income
+        string type_of_other_income
+    }
+    CLIENT ||--o{ ADDRESSES : possui
+    CLIENT ||--o{ BUSINESS : possui
+    CLIENT ||--|| SPOUSE : possui
+    CLIENT ||--o{ BANKACCOUNT : possui
+    CLIENT ||--o{ PERSONALINFO : possui
+    CLIENT ||--|| CREDITSOLICITATION : "solicitação"
+    ADDRESSES }o--|| BUSINESS : "pode ser comercial" 
