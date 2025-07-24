@@ -1,106 +1,97 @@
 erDiagram
-CREDIT_SOLICITATION {
-protocol
-status
-public_user
-credit_line
-proposal
-agent
-backoffice
-created_at
-updated_at
-}
-
-SOLICITATION_PARTICIPANT {
-solicitation
-user
-created_at
-updated_at
-}
-
-SOLICITATION_HISTORY {
-solicitation
-action
-timestamp
-created_at
-updated_at
-}
-
-SOLICITATION_TASK {
-solicitation
-description
-stage
-sequence
-is_completed
-due_date
-created_at
-updated_at
-}
-
-SOLICITATION_DOCUMENTS {
-document_type
-registration_number
-issuing_body
-date_of_issue
-photo
-description
-solicitation
-created_at
-updated_at
-}
-
-SOLICITATION_ENTERPRISE_PHOTOS {
-solicitation
-photo
-description
-created_at
-updated_at
-}
-
-SOLICITATION_REFERENCES {
-description
-degree_of_kinship
-phone_one
-phone_two
-solicitation
-created_at
-updated_at
-}
-
-SOLICITATION_PROPERTY {
-property_type
-property_conditions
-has_movable_property
-physical_structure_of_the_business
-is_own_property
-solicitation
-created_at
-updated_at
-}
-
-SOLICITATION_DATA {
-line_of_credit
-credit_purpose
-solicitation_text
-grace_period
-amortization_term
-full_term
-interest_rate
-rate_analysis
-claimed_amount
-duration
-payment_term
-shopping_frequency
-solicitation
-created_at
-updated_at
-}
-
-CREDIT_SOLICITATION ||--o{ SOLICITATION_PARTICIPANT : possui
-CREDIT_SOLICITATION ||--o{ SOLICITATION_HISTORY : possui
-CREDIT_SOLICITATION ||--o{ SOLICITATION_TASK : possui
-CREDIT_SOLICITATION ||--o{ SOLICITATION_DOCUMENTS : possui
-CREDIT_SOLICITATION ||--o{ SOLICITATION_ENTERPRISE_PHOTOS : possui
-CREDIT_SOLICITATION ||--o{ SOLICITATION_REFERENCES : possui
-CREDIT_SOLICITATION ||--o{ SOLICITATION_PROPERTY : possui
-CREDIT_SOLICITATION ||--o{ SOLICITATION_DATA : possui 
+    CREDIT_SOLICITATION {
+        string protocol
+        string status
+        string public_user
+        string credit_line
+        string proposal
+        string agent
+        string backoffice
+        date created_at
+        date updated_at
+    }
+    SOLICITATION_PARTICIPANT {
+        string solicitation
+        string user
+        date created_at
+        date updated_at
+    }
+    SOLICITATION_HISTORY {
+        string solicitation
+        string action
+        date timestamp
+        date created_at
+        date updated_at
+    }
+    SOLICITATION_TASK {
+        string solicitation
+        string description
+        string stage
+        int sequence
+        boolean is_completed
+        date due_date
+        date created_at
+        date updated_at
+    }
+    SOLICITATION_DOCUMENTS {
+        string document_type
+        string registration_number
+        string issuing_body
+        date date_of_issue
+        string photo
+        string description
+        string solicitation
+        date created_at
+        date updated_at
+    }
+    SOLICITATION_ENTERPRISE_PHOTOS {
+        string solicitation
+        string photo
+        string description
+        date created_at
+        date updated_at
+    }
+    SOLICITATION_REFERENCES {
+        string description
+        string degree_of_kinship
+        string phone_one
+        string phone_two
+        string solicitation
+        date created_at
+        date updated_at
+    }
+    SOLICITATION_PROPERTY {
+        string property_type
+        string property_conditions
+        boolean has_movable_property
+        string physical_structure_of_the_business
+        boolean is_own_property
+        string solicitation
+        date created_at
+        date updated_at
+    }
+    SOLICITATION_DATA {
+        string line_of_credit
+        string credit_purpose
+        string solicitation_text
+        string grace_period
+        string amortization_term
+        string full_term
+        float interest_rate
+        string rate_analysis
+        float claimed_amount
+        int duration
+        string payment_term
+        string shopping_frequency
+        string solicitation
+        date created_at
+        date updated_at
+    }
+    CREDIT_SOLICITATION ||--o{ SOLICITATION_PARTICIPANT : possui
+    CREDIT_SOLICITATION ||--o{ SOLICITATION_HISTORY : possui
+    CREDIT_SOLICITATION ||--o{ SOLICITATION_TASK : possui
+    CREDIT_SOLICITATION ||--o{ SOLICITATION_DOCUMENTS : possui
+    CREDIT_SOLICITATION ||--o{ SOLICITATION_ENTERPRISE_PHOTOS : possui
+    CREDIT_SOLICITATION ||--o{ SOLICITATION_REFERENCES : possui
+    CREDIT_SOLICITATION ||--o{ SOLICITATION_PROPERTY : possui
+    CREDIT_SOLICITATION ||--o{ SOLICITATION_DATA : possui 
