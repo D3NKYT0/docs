@@ -1,99 +1,99 @@
 erDiagram
 CREDIT_SOLICITATION {
-string protocol
-string status
+protocol
+status
 public_user
 credit_line
 proposal
 agent
 backoffice
-datetime created_at
-datetime updated_at
+created_at
+updated_at
 }
 
 SOLICITATION_PARTICIPANT {
 solicitation
 user
-datetime created_at
-datetime updated_at
+created_at
+updated_at
 }
 
 SOLICITATION_HISTORY {
 solicitation
-string action
-datetime timestamp
-datetime created_at
-datetime updated_at
+action
+timestamp
+created_at
+updated_at
 }
 
 SOLICITATION_TASK {
 solicitation
-string description
-string stage
-int sequence
-boolean is_completed
-datetime due_date
-datetime created_at
-datetime updated_at
+description
+stage
+sequence
+is_completed
+due_date
+created_at
+updated_at
 }
 
 SOLICITATION_DOCUMENTS {
-string document_type
-string registration_number
-string issuing_body
-date date_of_issue
-string photo
-string description
+document_type
+registration_number
+issuing_body
+date_of_issue
+photo
+description
 solicitation
-datetime created_at
-datetime updated_at
+created_at
+updated_at
 }
 
 SOLICITATION_ENTERPRISE_PHOTOS {
 solicitation
-string photo
-string description
-datetime created_at
-datetime updated_at
+photo
+description
+created_at
+updated_at
 }
 
 SOLICITATION_REFERENCES {
-string description
-string degree_of_kinship
-string phone_one
-string phone_two
+description
+degree_of_kinship
+phone_one
+phone_two
 solicitation
-datetime created_at
-datetime updated_at
+created_at
+updated_at
 }
 
 SOLICITATION_PROPERTY {
-string property_type
-string property_conditions
-boolean has_movable_property
-text physical_structure_of_the_business
-boolean is_own_property
+property_type
+property_conditions
+has_movable_property
+physical_structure_of_the_business
+is_own_property
 solicitation
-datetime created_at
-datetime updated_at
+created_at
+updated_at
 }
 
 SOLICITATION_DATA {
-string line_of_credit
-string credit_purpose
-text solicitation_text
-string grace_period
-string amortization_term
-string full_term
-decimal interest_rate
-text rate_analysis
-decimal claimed_amount
-int duration
-string payment_term
-string shopping_frequency
+line_of_credit
+credit_purpose
+solicitation_text
+grace_period
+amortization_term
+full_term
+interest_rate
+rate_analysis
+claimed_amount
+duration
+payment_term
+shopping_frequency
 solicitation
-datetime created_at
-datetime updated_at
+created_at
+updated_at
 }
 
 CREDIT_SOLICITATION ||--o{ SOLICITATION_PARTICIPANT : possui
