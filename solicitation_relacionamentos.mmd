@@ -2,29 +2,29 @@ erDiagram
     CREDIT_SOLICITATION {
         string protocol
         string status
-        FK public_user
-        FK credit_line
-        FK proposal
-        FK agent
-        FK backoffice
+        public_user
+        credit_line
+        proposal
+        agent
+        backoffice
         datetime created_at
         datetime updated_at
     }
     SOLICITATION_PARTICIPANT {
-        FK solicitation
-        FK user
+        solicitation
+        user
         datetime created_at
         datetime updated_at
     }
     SOLICITATION_HISTORY {
-        FK solicitation
+        solicitation
         string action
         datetime timestamp
         datetime created_at
         datetime updated_at
     }
     SOLICITATION_TASK {
-        FK solicitation
+        solicitation
         string description
         string stage
         int sequence
@@ -40,12 +40,12 @@ erDiagram
         date date_of_issue
         string photo
         string description
-        FK solicitation
+        solicitation
         datetime created_at
         datetime updated_at
     }
     SOLICITATION_ENTERPRISE_PHOTOS {
-        FK solicitation
+        solicitation
         string photo
         string description
         datetime created_at
@@ -56,7 +56,7 @@ erDiagram
         string degree_of_kinship
         string phone_one
         string phone_two
-        FK solicitation
+        solicitation
         datetime created_at
         datetime updated_at
     }
@@ -66,7 +66,7 @@ erDiagram
         boolean has_movable_property
         text physical_structure_of_the_business
         boolean is_own_property
-        FK solicitation
+        solicitation
         datetime created_at
         datetime updated_at
     }
@@ -83,7 +83,7 @@ erDiagram
         int duration
         string payment_term
         string shopping_frequency
-        FK solicitation
+        solicitation
         datetime created_at
         datetime updated_at
     }
