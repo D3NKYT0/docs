@@ -10,12 +10,14 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
+
     SOLICITATION_PARTICIPANT {
         solicitation
         user
         datetime created_at
         datetime updated_at
     }
+
     SOLICITATION_HISTORY {
         solicitation
         string action
@@ -23,6 +25,7 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
+
     SOLICITATION_TASK {
         solicitation
         string description
@@ -33,6 +36,7 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
+
     SOLICITATION_DOCUMENTS {
         string document_type
         string registration_number
@@ -44,6 +48,7 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
+
     SOLICITATION_ENTERPRISE_PHOTOS {
         solicitation
         string photo
@@ -51,6 +56,7 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
+
     SOLICITATION_REFERENCES {
         string description
         string degree_of_kinship
@@ -60,6 +66,7 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
+
     SOLICITATION_PROPERTY {
         string property_type
         string property_conditions
@@ -70,6 +77,7 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
+
     SOLICITATION_DATA {
         string line_of_credit
         string credit_purpose
@@ -87,6 +95,7 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
+
     CREDIT_SOLICITATION ||--o{ SOLICITATION_PARTICIPANT : possui
     CREDIT_SOLICITATION ||--o{ SOLICITATION_HISTORY : possui
     CREDIT_SOLICITATION ||--o{ SOLICITATION_TASK : possui
