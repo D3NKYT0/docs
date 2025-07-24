@@ -1,0 +1,106 @@
+erDiagram
+    CREDIT_PROPOSAL {
+        string protocol
+        string status
+        FK agent
+        FK backoffice
+        datetime created_at
+        datetime updated_at
+    }
+    PROPOSAL_PARTICIPANT {
+        FK proposal
+        FK user
+        datetime created_at
+        datetime updated_at
+    }
+    PROPOSAL_HISTORY {
+        FK proposal
+        string action
+        datetime timestamp
+        datetime created_at
+        datetime updated_at
+    }
+    PROPOSAL_TASK {
+        FK proposal
+        string description
+        string stage
+        int sequence
+        boolean is_completed
+        datetime due_date
+        datetime created_at
+        datetime updated_at
+    }
+    PROPOSAL_GUARANTOR {
+        string name
+        string cpf
+        string email
+        date date_of_birth
+        string phone
+        boolean is_politically_exposed
+        text exhibition_description
+        string gender
+        string address_cep
+        string address_uf
+        string address_city
+        string address_street
+        string address_district
+        string address_number
+        string address_complement
+        string address_type
+        string spouse_name
+        string spouse_cpf
+        date spouse_date_of_birth
+        string spouse_profession
+        decimal spouse_net_income
+        string spouse_phone
+        string spouse_email
+        string spouse_document_type
+        string spouse_registration_number
+        string spouse_issuing_body
+        date spouse_date_of_issue
+        string first_reference_description
+        string first_reference_degree_of_kinship
+        string first_reference_phone_one
+        string first_reference_phone_two
+        string second_reference_description
+        string second_reference_degree_of_kinship
+        string second_reference_phone_one
+        string second_reference_phone_two
+        string father
+        string mother
+        int number_of_dependents
+        string nationality
+        string birthplace
+        string birthstate
+        string level_of_education
+        string civil_status
+        string marriage_regime
+        string profession
+        string complementary_phone
+        string social_network
+        string document_type
+        string registration_number
+        string issuing_body
+        date date_of_issue
+        decimal net_income
+        decimal other_income
+        string type_of_other_income
+        FK proposal
+        datetime created_at
+        datetime updated_at
+    }
+    PROPOSAL_OPINION {
+        FK proposal
+        string department
+        FK evaluator
+        string status
+        text opinion_text
+        datetime given_at
+        datetime updated_at
+        datetime created_at
+    }
+    CREDIT_PROPOSAL ||--o{ PROPOSAL_PARTICIPANT : possui
+    CREDIT_PROPOSAL ||--o{ PROPOSAL_HISTORY : possui
+    CREDIT_PROPOSAL ||--o{ PROPOSAL_TASK : possui
+    CREDIT_PROPOSAL ||--o{ PROPOSAL_GUARANTOR : possui
+    CREDIT_PROPOSAL ||--o{ PROPOSAL_OPINION : possui 
