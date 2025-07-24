@@ -2,26 +2,26 @@ erDiagram
     CREDIT_PROPOSAL {
         string protocol
         string status
-        FK agent
-        FK backoffice
+        string agent
+        string backoffice
         datetime created_at
         datetime updated_at
     }
     PROPOSAL_PARTICIPANT {
-        FK proposal
-        FK user
+        string proposal
+        string user
         datetime created_at
         datetime updated_at
     }
     PROPOSAL_HISTORY {
-        FK proposal
+        string proposal
         string action
         datetime timestamp
         datetime created_at
         datetime updated_at
     }
     PROPOSAL_TASK {
-        FK proposal
+        string proposal
         string description
         string stage
         int sequence
@@ -85,14 +85,14 @@ erDiagram
         decimal net_income
         decimal other_income
         string type_of_other_income
-        FK proposal
+        string proposal
         datetime created_at
         datetime updated_at
     }
     PROPOSAL_OPINION {
-        FK proposal
+        string proposal
         string department
-        FK evaluator
+        string evaluator
         string status
         text opinion_text
         datetime given_at
