@@ -1,6 +1,6 @@
-# Variáveis de Ambiente - ProAGE SUOP
+# Variáveis de Ambiente - ProAGE 2
 
-Este documento lista todas as variáveis de ambiente possíveis utilizadas no projeto ProAGE SUOP.
+Este documento lista todas as variáveis de ambiente possíveis utilizadas no projeto ProAGE 2.
 
 ## 📋 Índice
 
