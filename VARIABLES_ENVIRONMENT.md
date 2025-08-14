@@ -311,7 +311,7 @@ SECRET_KEY='sua_chave_secreta_de_32_bytes_aqui'
 # Banco de Dados
 DB_ENGINE=postgresql
 DB_HOST=localhost
-DB_NAME=proage_suop
+DB_NAME=proage_2
 DB_USERNAME=postgres
 DB_PASS=sua_senha_aqui
 DB_PORT=5432
@@ -326,7 +326,7 @@ CONFIG_EMAIL_HOST_PASSWORD=sua_senha_de_app
 CONFIG_EMAIL_PORT=587
 
 # Cache/Redis
-DJANGO_CACHE_REDIS_URI=redis://redis_suop:6379/0
+DJANGO_CACHE_REDIS_URI=redis://redis_2:6379/0
 
 # Segurança
 ENCRYPTION_KEY='sua_chave_de_criptografia_de_32_bytes'
